@@ -28,22 +28,6 @@
         li {
             float: left;
             position: relative;
-            &.has-children {
-                > a {
-                    &::after {
-                        content: "\f10d";
-                        font-family: uicons-regular-rounded !important;
-                        font-style: normal;
-                        font-weight: normal !important;
-                        font-variant: normal;
-                        text-transform: none;
-                        line-height: 1 !important;
-                        font-size: 9px;
-                        opacity: 0.5;
-                        margin-left: 4px;
-                    }
-                }
-            }
             &.hr {
                 padding: 0px 22px;
                 span {
