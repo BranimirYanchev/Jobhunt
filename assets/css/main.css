@@ -2704,7 +2704,7 @@ label {
 }
 
 .breacrumb-cover {
-  background-color: #fff9f3;
+  
   padding: 20px 0;
 }
 
@@ -2764,7 +2764,7 @@ label {
   border-top-right-radius: 150px;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 0px;
-  background-color: #fff9f3;
+  
   z-index: 1;
 }
 
@@ -3162,7 +3162,7 @@ label {
 }
 
 .header.header-2 {
-  background-color: #fff9f3;
+  
 }
 
 .sticky-bar.stick {
@@ -3873,6 +3873,10 @@ label {
 
 .section-padding {
   padding: 25px 0;
+}
+
+.h-500{
+  height: 500px;
 }
 
 .ptb-0 {
@@ -5399,11 +5403,6 @@ label {
   background-position: 0 5%;
 }
 
-.header-bg,
-.bg-banner-about {
-  background-color: #fff9f3;
-}
-
 .bg-banner-about {
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
@@ -5675,7 +5674,7 @@ label {
 }
 
 .block-pricing {
-  background-color: #fff9f3;
+  
   border-radius: 30px;
 }
 
@@ -6059,7 +6058,7 @@ label {
 }
 
 .box-head-single {
-  background-color: #FFF9F3;
+  
   display: inline-block;
   width: 100%;
   padding: 55px 0px;
@@ -7858,10 +7857,7 @@ label {
 }
 
 /*OTHER SCREEN*/
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
-  .header-right {
-    display: none;
-  }
-}
+/* @media screen and (min-width: 1200px) and (max-width: 1440px) {
+} */
 
 /*# sourceMappingURL=main.css.map */
