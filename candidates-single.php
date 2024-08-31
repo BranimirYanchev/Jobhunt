@@ -2,20 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Jobhub - Job Board HTML Website Template</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css?v=1.0" />
+    <?php include 'assets/elements/head.php' ?>
 </head>
 
 <body>
@@ -29,97 +16,11 @@
             </div>
         </div>
     </div>
-    <header class="header sticky-bar">
-        <div class="container">
-            <div class="main-header">
-                <div class="header-left">
-                    <div class="header-logo">
-                        <a href="index.html" class="d-flex"><img alt="jobhub" src="assets/imgs/theme/jobhub-logo.svg" /></a>
-                    </div>
-                    <div class="header-nav">
-                        <nav class="nav-main-menu d-none d-xl-block">
-                            <ul class="main-menu">
-                                <li class="has-children">
-                                    <a class="active" href="index.html">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="job-grid.html">Browse Jobs</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="job-grid.html">Job Grid</a></li>
-                                        <li><a href="job-grid-2.html">Job Grid 2</a></li>
-                                        <li><a href="job-list.html">Job List</a></li>
-                                        <li class="hr"><span></span></li>
-                                        <li><a href="job-single.html">Job Single 01</a></li>
-                                        <li><a href="job-single-2.html">Job Single 02</a></li>
-                                        <li><a href="job-single-3.html">Job Single 03</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="employers-grid.html">Employers</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="employers-grid.html">Employers Grid</a></li>
-                                        <li><a href="employers-grid-2.html">Employers Grid 2</a></li>
-                                        <li><a href="employers-list.html">Employers List</a></li>
-                                        <li class="hr"><span></span></li>
-                                        <li><a href="employers-single.html">Employers Single 01</a></li>
-                                        <li><a href="employers-single-2.html">Employers Single 02</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="candidates-grid.html">Candidates</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="candidates-grid.html">Candidates Grid</a></li>
-                                        <li><a href="candidates-grid-2.html">Candidates Grid 2</a></li>
-                                        <li><a href="candidates-list.html">Candidates List</a></li>
-                                        <li class="hr"><span></span></li>
-                                        <li><a href="candidates-single.html">Candidates Single 01</a></li>
-                                        <li><a href="candidates-single-2.html">Candidates Single 02</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-grid-2.html">Blog Grid Sidebar</a></li>
-                                        <li><a href="blog-list.html">Blog List</a></li>
-                                        <li class="hr"><span></span></li>
-                                        <li><a href="blog-single.html">Blog Single 01</a></li>
-                                        <li><a href="blog-single-2.html">Blog Single 02</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-children">
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-service.html">Our Services</a></li>
-                                        <li><a href="page-pricing.html">Pricing Plan</a></li>
-                                        <li><a href="pages-faqs.html">FAQs</a></li>
-                                        <li><a href="page-contact.html">Contact Us</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="burger-icon burger-icon-white">
-                            <span class="burger-icon-top"></span>
-                            <span class="burger-icon-mid"></span>
-                            <span class="burger-icon-bottom"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="block-signin">
-                        <a href="#" class="text-link-bd-btom hover-up">Apply Now</a>
-                        <a href="#" class="btn btn-default btn-shadow ml-40 hover-up">Sign in</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- HEADER -->
+
+    <?php include 'assets/elements/header.php' ?>
+
+    <!-- END-HEADER -->
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
@@ -767,67 +668,9 @@
     </main>
     <!-- End Content -->
     <!-- Footer -->
-    <footer class="footer mt-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <a href="index.html"><img alt="jobhub" src="assets/imgs/theme/jobhub-logo.svg" /></a>
-                    <div class="mt-20 mb-20">Jobhub is the heart of the design community and the best resource to discover and connect with designers and jobs worldwide.</div>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                    <h6>Company</h6>
-                    <ul class="menu-footer mt-40">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                    <h6>Product</h6>
-                    <ul class="menu-footer mt-40">
-                        <li><a href="#">Feature</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Credit</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                    <h6>Download</h6>
-                    <ul class="menu-footer mt-40">
-                        <li><a href="#">iOS</a></li>
-                        <li><a href="#">Android</a></li>
-                        <li><a href="#">Microsoft</a></li>
-                        <li><a href="#">Desktop</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                    <h6>Support</h6>
-                    <ul class="menu-footer mt-40">
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom mt-50">
-                <div class="row">
-                    <div class="col-md-6">
-                        Copyright ©2021 <a href="#"><strong>Jobhub</strong></a>. All Rights Reserved
-                    </div>
-                    <div class="col-md-6 text-md-end text-start">
-                        <div class="footer-social">
-                            <a href="#" class="icon-socials icon-facebook"></a>
-                            <a href="#" class="icon-socials icon-twitter"></a>
-                            <a href="#" class="icon-socials icon-instagram"></a>
-                            <a href="#" class="icon-socials icon-linkedin"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+    <?php include 'assets/elements/footer.php' ?>
+
     <!-- End Footer -->
     <!-- Vendor JS-->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>

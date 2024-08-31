@@ -2,20 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Jobhub - Job Board HTML Website Template</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css?v=1.0" />
+    <?php include 'assets/elements/head.php' ?>
 </head>
 
 <body>
@@ -29,46 +16,13 @@
             </div>
         </div>
     </div>
-    <header class="header sticky-bar">
-        <div class="container">
-            <div class="main-header">
-                <div class="header-logo">
-                    <a href="index.html" class="d-flex"><img alt="jobhub" src="assets/imgs/theme/jobhunt-logo.svg"></a>
-                    </div>
-                <div class="header-left">    
-                    <div class="header-nav">
-                        <nav class="nav-main-menu d-none d-xl-block">
-                            <ul class="main-menu">
-                                <li>
-                                    <a class="active" href="index.html">Начало</a>
-                                </li>
-                                 <li class="has-children">
-                                    <a href="">Намери</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="job-list.html">Работа</a></li>
-                                        <li><a href="candidates-list.html">Човек</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="page-about.html">За Нас</a>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html">Контакти</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="block-signin">
-                        <a href="#" class="text-link-bd-btom hover-up">Създай Обява</a>
-                        <a href="#" class="btn btn-default btn-shadow ml-40 hover-up">Вход</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    
+    <!-- HEADER -->
+
+    <?php include 'assets/elements/header.php' ?>
+
+    <!-- END-HEADER -->
+    
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
@@ -755,26 +709,9 @@
     </main>
     <!-- End Content -->
     <!-- Footer -->
-    <footer class="footer mt-50">
-        <div class="container">
-            <div class="row">
-            <div class="footer-bottom mt-50">
-                <div class="row">
-                    <div class="col-md-6">
-                        Copyright ©2024 <a href="#"><strong>JobHunt</strong></a>. All Rights Reserved
-                    </div>
-                    <div class="col-md-6 text-md-end text-start">
-                        <div class="footer-social">
-                            <a href="#" class="icon-socials icon-facebook"></a>
-                            <a href="#" class="icon-socials icon-twitter"></a>
-                            <a href="#" class="icon-socials icon-instagram"></a>
-                            <a href="#" class="icon-socials icon-linkedin"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
+    <?php include 'assets/elements/footer.php' ?>
+
     <!-- End Footer -->
     <!-- Vendor JS-->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
