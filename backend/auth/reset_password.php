@@ -1,25 +1,27 @@
 <?php
 require_once '../db.php';
-require_once '../mailer.php'; // Файл за изпращане на имейли
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $email = $_POST['email'];
+if (isset($_GET['token'])) {
+    $token = $_GET['token'];
 
-    // Проверка дали имейлът съществува
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->execute([$email]);
-    $user = $stmt->fetch();
+    // Проверка на токена
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE reset_token = ? AND reset_token_expires > NOW()");
+    $stmt->execute([$token]);
 
-    if ($user) {
-        $token = bin2hex(random_bytes(50));
-        $stmt = $pdo->prepare("UPDATE users SET reset_token = ? WHERE email = ?");
-        $stmt->execute([$token, $email]);
-
-        // Изпращане на имейл с линк за ресетване на паролата
-        sendResetEmail($email, $token);
-        echo "Check your email for reset instructions!";
+    if ($stmt->rowCount() > 0) {
+        // Показване на форма за нова парола
+        ?>
+        <form action="update_password.php" method="POST">
+            <input type="hidden" name="token" value="<?php echo $token; ?>">
+            <label for="password">Нова парола:</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Потвърди</button>
+        </form>
+        <?php
     } else {
-        echo "Email not found!";
+        echo "Invalid or expired token!";
     }
+} else {
+    echo "No token provided!";
 }
 ?>

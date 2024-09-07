@@ -13,7 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([$email]);
 
     if ($stmt->rowCount() > 0) {
-        echo "Email already registered!";
+        echo "<script type='text/javascript'>
+                alert('Email already registered!');
+                window.location.href = 'http://localhost/Jobhunt/index.php';
+            </script>";
     } else {
         // Добавяне на потребителя с verification_token
         $stmt = $pdo->prepare("INSERT INTO users (name, email, password, verification_token) VALUES (?, ?, ?, ?)");

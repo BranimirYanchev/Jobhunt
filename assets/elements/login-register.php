@@ -1,12 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['user_id'])) {
-    header("Location: dashboard.php");
-    exit();
-}
-?>
-
-
 <div id="login-register" class="login-register">
     <section class="container2 forms">
         <div class="form login">
@@ -24,7 +15,7 @@ if (isset($_SESSION['user_id'])) {
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
                     <div class="form-link">
-                        <a href="reset_password.php" class="forgot-pass">Забравена парола?</a>
+                        <a href="forgot_password.php" class="forgot-pass">Забравена парола?</a>
                     </div>
                     <div class="field button-field">
                         <button type="submit">Влез</button>
@@ -38,13 +29,13 @@ if (isset($_SESSION['user_id'])) {
             <div class="media-options">
                 <a href="#" class="field facebook">
                     <i class='bx bxl-facebook facebook-icon'></i>
-                    <span href="C:\xampp\htdocs\Jobhunt\backend\callback\facebook.php">Вход с FaceBook</span>
+                    <span href="Jobhunt\backend\callback\facebook.php">Вход с FaceBook</span>
                 </a>
             </div>
-            <div class="media-options">
+            <div class="media-options"> 
                 <a href="#" class="field google">
                     <img src="./assets/imgs/google.png" alt="" class="google-img">
-                    <span href="C:\xampp\htdocs\Jobhunt\backend\callback\google.php">Вход с Google</span>
+                    <span href="Jobhunt\backend\callback\google.php">Вход с Google</span>
                 </a>
             </div>
         </div>
@@ -80,13 +71,13 @@ if (isset($_SESSION['user_id'])) {
             <div class="media-options">
                 <a href="#" class="field facebook">
                     <i class='bx bxl-facebook facebook-icon'></i>
-                    <span href="C:\xampp\htdocs\Jobhunt\backend\callback\facebook.php">Вход с FaceBook</span>
+                    <span href="Jobhunt\backend\callback\facebook.php">Вход с FaceBook</span>
                 </a>
             </div>
             <div class="media-options">
                 <a href="#" class="field google">
                     <img src=".\assets\imgs\google.png" alt="" class="google-img">
-                    <span href="C:\xampp\htdocs\Jobhunt\backend\callback\google.php">Вход с Google</span>
+                    <span href="Jobhunt\backend\callback\google.php">Вход с Google</span>
                 </a>
             </div>
         </div>

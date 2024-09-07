@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($user && password_verify($password, $user['password'])) {
             if ($user['email_verified'] == 1) {
                 $_SESSION['user_id'] = $user['id'];
-                header("Location: ../../dashboard.php");
+                header("Location: ../../index.php");
                 exit();
             } else {
                 echo "Please verify your email before logging in.";
