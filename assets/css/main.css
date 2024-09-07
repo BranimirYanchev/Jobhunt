@@ -2978,7 +2978,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 8;
   background: #fff;
 }
 
@@ -3167,7 +3167,7 @@ label {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 8;
   left: 0;
   transition: all 0.3s ease 0s;
   border-bottom: 1px solid #ececec;
@@ -7850,6 +7850,10 @@ label {
   .container.wide {
     max-width: 1544px;
   }
+}
+
+.no-scroll{
+  overflow-y: hidden;
 }
 
 /*OTHER SCREEN*/

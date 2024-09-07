@@ -3,6 +3,8 @@
 
 <head>
     <?php include 'assets/elements/head.php' ?>
+    <link rel="stylesheet" href="assets/elements/form/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 
 <body>
@@ -22,14 +24,6 @@
     <?php include 'assets/elements/header.php' ?>
 
     <!-- END-HEADER -->
-
-
-    <!-- LOGIN AND REGISTER -->
-
-    <?php include 'assets/elements/login-register.php'; ?>
-
-    <!-- END LOGIN AND REGISTER -->
-    
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
         <div class="mobile-header-wrapper-inner">
             <div class="mobile-header-top">
@@ -106,6 +100,9 @@
     <!--End header-->
     <!-- Content -->
     <main class="main">
+
+        <?php include "assets/elements/form/index.php" ?>
+
         <section class="section-box">
             <div class="banner-hero banner-homepage-3">
                 <div class="banner-inner">
