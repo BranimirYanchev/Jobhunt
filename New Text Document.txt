@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 TI SI TUP
+=======
+Ti si gei
+>>>>>>> f4d419a00e4f4e8fbc3c7820c12d0ddbf0b6c53c
