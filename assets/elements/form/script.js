@@ -5,32 +5,10 @@ const formOpenBtn = document.querySelector("#form-open"),
 	signupBtn = document.querySelector("#signup"),
 	loginBtn = document.querySelector("#login"),
 	pwShowHide = document.querySelectorAll(".pw_hide"),
-	login = document.querySelectorAll(".login_form")[0],
-	register = document.querySelectorAll(".signup_form")[0];
+	loginForm = document.querySelector(".login_form"),
+	registerForm = document.querySelector(".signup_form"),
+	slideTab = document.querySelector(".slider-tab");
 
-// pwShowHide.forEach(eyeIcon => {
-// eyeIcon.addEventListener("click", () => {
-//   let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-
-//   pwFields.forEach(password => {
-//       if(password.type === "password"){
-//           password.type = "text";
-//           eyeIcon.classList.replace("bx-hide", "bx-show");
-//           return;
-//       }
-//       password.type = "password";
-//       eyeIcon.classList.replace("bx-show", "bx-hide");
-//   })
-
-// })
-// })      
-
-// links.forEach(link => {
-// link.addEventListener("click", e => {
-//  e.preventDefault(); //preventing form submit
-//  forms.classList.toggle("show-signup");
-// })
-// })
 
 
 document.getElementById('toggleButton').addEventListener('click', function () {
@@ -68,15 +46,18 @@ pwShowHide.forEach((icon) => {
 	});
 });
 
+
 signupBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	login.classList.add("hide-form");
-	register.classList.remove("hide-form");
+	loginForm.classList.add("hide-form");
+	registerForm.classList.remove("hide-form");
 });
 
 loginBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	login.classList.remove("hide-form");
-	register.classList.add("hide-form");
+	loginForm.classList.remove("hide-form");
+	registerForm.classList.add("hide-form");
 });
+
+
 
