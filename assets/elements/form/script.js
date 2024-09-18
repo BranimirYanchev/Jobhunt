@@ -5,33 +5,11 @@ const formOpenBtn = document.querySelector("#form-open"),
 	signupBtn = document.querySelector("#signup"),
 	loginBtn = document.querySelector("#login"),
 	pwShowHide = document.querySelectorAll(".pw_hide"),
-	login = document.querySelectorAll(".login_form")[0],
-	register = document.querySelectorAll(".signup_form")[0];
-
-// pwShowHide.forEach(eyeIcon => {
-// eyeIcon.addEventListener("click", () => {
-//   let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-
-//   pwFields.forEach(password => {
-//       if(password.type === "password"){
-//           password.type = "text";
-//           eyeIcon.classList.replace("bx-hide", "bx-show");
-//           return;
-//       }
-//       password.type = "password";
-//       eyeIcon.classList.replace("bx-show", "bx-hide");
-//   })
-
-// })
-// })      
-
-// links.forEach(link => {
-// link.addEventListener("click", e => {
-//  e.preventDefault(); //preventing form submit
-//  forms.classList.toggle("show-signup");
-// })
-// })
-
+	loginForm = document.querySelector(".login_form"),
+	registerForm = document.querySelector(".signup_form"),
+	slideTab = document.querySelector(".slider-tab"),
+	loginParts = document.querySelectorAll(".login-part"),
+	signupParts = document.querySelectorAll(".signup-part");
 
 document.getElementById('toggleButton').addEventListener('click', function () {
 	var div = document.querySelectorAll('.form-page')[0];
@@ -53,8 +31,6 @@ document.querySelectorAll('.form_close')[0].addEventListener('click', function (
 	document.body.classList.remove('no-scroll');
 });
 
-
-
 pwShowHide.forEach((icon) => {
 	icon.addEventListener("click", () => {
 		let getPwInput = icon.parentElement.querySelector("input");
@@ -68,15 +44,37 @@ pwShowHide.forEach((icon) => {
 	});
 });
 
+function whiteColor(el){
+	el.classList.remove("c-b");
+}
+
+function blackColor(el){
+	el.classList.add("c-b");
+}
+
+function hideFormEls(els){
+	els[0].classList.add("hide-form-el");
+	blackColor(els[1]);
+	whiteColor(signupParts[1])
+	document.querySelector(".slider-tab").style.left = "50%";
+	document.querySelector(".login-form").style.marginLeft = "-50%";
+}
+
+function showFormEls(els){
+	els[0].classList.remove("hide-form-el");
+	whiteColor(els[1]);
+	blackColor(signupParts[1])
+	document.querySelector(".slider-tab").style.left = "0%";
+	document.querySelector(".login-form").style.marginLeft = "0";
+}
+
 signupBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	login.classList.add("hide-form");
-	register.classList.remove("hide-form");
+	hideFormEls(loginParts);
 });
 
 loginBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	login.classList.remove("hide-form");
-	register.classList.add("hide-form");
+	showFormEls(loginParts);
 });
 

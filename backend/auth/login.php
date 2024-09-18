@@ -2,28 +2,34 @@
 require_once '../db.php';
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+if (!(isset($_POST['email']) && isset($_POST['password']))) {
+    echo json_encode(["status" => "error"]);
+    exit();
+}
 
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-        $stmt->execute([$email]);
-        $user = $stmt->fetch();
+$email = $_POST['email'];
+$password = $_POST['password'];
+$type = 0;
 
-        if ($user && password_verify($password, $user['password'])) {
-            if ($user['email_verified'] == 1) {
-                $_SESSION['user_id'] = $user['id'];
-                header("Location: ../../index.php");
-                exit();
-            } else {
-                echo "Please verify your email before logging in.";
-            }
-        } else {
-            echo "Invalid email or password!";
-        }
-    } else {
-        echo "Please enter both email and password.";
+include "verify_data.php";
+
+$userInfo = fetchData($pdo, $email);
+
+if ($userInfo && password_verify($password, $userInfo['password'])) {
+    if ($userInfo['email_verified'] == 1) {
+        $_SESSION['user_id'] = $userInfo['id'];
+        $_SESSION['username'] = $userInfo["username"];
+        echo json_encode($message);
+        exit();
     }
+} else {
+    echo json_encode(["status" => "user_not_exists"]);
+}
+
+function fetchData($pdo, $email)
+{
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt->execute([$email]);
+    return $stmt->fetch();
 }
 ?>
