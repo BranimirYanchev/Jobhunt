@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 07, 2024 at 11:32 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Host: localhost:8889
+-- Generation Time: Sep 19, 2024 at 06:50 AM
+-- Server version: 8.0.35
+-- PHP Version: 8.2.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `oauth_users` (
-  `id` int(11) NOT NULL,
-  `user_id` varchar(255) NOT NULL,
-  `provider` varchar(255) NOT NULL,
-  `provider_id` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` int NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `provider` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `provider_id` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -42,15 +42,15 @@ CREATE TABLE `oauth_users` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `email_verified` tinyint(1) DEFAULT 0,
-  `verification_token` varchar(255) DEFAULT NULL,
-  `reset_token` varchar(255) DEFAULT NULL,
+  `id` int NOT NULL,
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `email_verified` tinyint(1) DEFAULT '0',
+  `verification_token` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `reset_token` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `reset_token_expires` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -58,8 +58,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`, `email_verified`, `verification_token`, `reset_token`, `reset_token_expires`) VALUES
-(20, 'Spas Kitanov', 'kitanovspas08@gmail.com', '$2y$10$irlJOxyDhghTzRM7lISiPOkB6xjkwsVnnaMbUlBdmntsHYKxb/jrm', '2024-09-07 09:08:22', '2024-09-07 09:18:24', 1, NULL, '9842f0eddf0f05d67cdafc7e302d864270a3d69f9750fee8341d302e6353a6cb50e1021185e4325460932665f62ec5159688', '2024-09-07 12:18:24');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `created_at`, `updated_at`, `email_verified`, `verification_token`, `reset_token`, `reset_token_expires`) VALUES
+(24, 'admin', 'admin@jobhunt.bg', '$2y$10$ouDiR8bLvP25yQliA6mb1.dZbgNforhGww36LrANX9hLoOFC4p7xu', '2024-09-18 22:46:39', '2024-09-18 22:46:54', 1, 'b8eaa1111f9ee117fdbe1e083bce3838eea8d6d292d7867bcf092fdc9a046a11b7397ae7b19747e5c09c31194322b2f7410f', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -87,13 +87,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `oauth_users`
 --
 ALTER TABLE `oauth_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
