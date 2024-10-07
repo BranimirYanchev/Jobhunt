@@ -68,6 +68,7 @@ function showFormEls(els){
 	document.querySelector(".login-form").style.marginLeft = "0";
 }
 
+
 signupBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	hideFormEls(loginParts);

@@ -2,7 +2,7 @@
 session_start();
 
 // Предполага се, че логването задава сесионна променлива 'loggedin'
-$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$isLoggedIn = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true;
 ?>
 
 
@@ -43,10 +43,10 @@ $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
                         <?php
                             if ($isLoggedIn) {
                                 // Когато потребителят е логнат
-                                echo '<a class="btn btn-default btn-shadow ml-40 hover-up" href="logout.php">Изход</a>';
+                                echo '<a class="btn btn-default btn-shadow ml-40 hover-up" href="backend/auth/logout.php">Изход</a>';
                             } else {
                                 // Когато потребителят не е логнат
-                                echo '<button class="btn btn-default btn-shadow ml-40 hover-up" id="toggleButton">Вход</button>';
+                                echo '<a class="btn btn-default btn-shadow ml-40 hover-up" id="toggleButton">Вход</a>';
                             }
                         ?>
                     </div>

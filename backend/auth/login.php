@@ -1,6 +1,5 @@
 <?php
 require_once '../db.php';
-session_start();
 
 if (!(isset($_POST['email']) && isset($_POST['password']))) {
     echo json_encode(["status" => "error"]);
@@ -13,12 +12,21 @@ $type = 0;
 
 include "verify_data.php";
 
+session_start();
+
 $userInfo = fetchData($pdo, $email);
 
 if ($userInfo && password_verify($password, $userInfo['password'])) {
     if ($userInfo['email_verified'] == 1) {
         $_SESSION['user_id'] = $userInfo['id'];
         $_SESSION['username'] = $userInfo["username"];
+        $_SESSION["is_logged_in"] = true;
+        echo json_encode($message);
+        exit();
+    }else{
+        $_SESSION['user_id'] = $userInfo['id'];
+        $_SESSION['username'] = $userInfo["username"];
+        $_SESSION["is_logged_in"] = true;
         echo json_encode($message);
         exit();
     }

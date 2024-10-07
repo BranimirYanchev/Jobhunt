@@ -1,4 +1,4 @@
-<div class="form-page fade-in">
+<div class="form-page">
   <div class="form_container">
     <i class="uil uil-times form_close"></i>
 

@@ -40,7 +40,7 @@ function showMessage(message, type){
 
     if(message == "success"){
         toastr.success("Operation was successful!");
-        window.open("temp.php", "_self")
+        window.open("dashboard/index.php", "_self")
         return;
     }
 
