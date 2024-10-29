@@ -294,3 +294,30 @@ input[name="slide"]{
     display: none;
 }
 
+.fade-in-element {
+    animation: fadeIn 1s; /* Apply animation */
+}
+
+.fade-out-element {
+    animation: fadeIn 1s; /* Apply animation */
+}
+
+/* Define keyframes for fade-out */
+@keyframes fadeIn {
+    0%{
+        opacity: 0; /* Completely transparent */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Define keyframes for fade-out */
+@keyframes fadeOut {
+    0%{
+        opacity: 1; /* Completely transparent */
+    }
+    100% {
+        opacity: 0; /* Completely transparent */
+    }
+}

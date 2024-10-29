@@ -9,5 +9,4 @@ session_destroy();
 
 // Пренасочване към страницата за вход
 header("Location: ../../index.php");
-exit();
 ?>

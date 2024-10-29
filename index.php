@@ -3,8 +3,6 @@
 
 <head>
     <?php include 'assets/elements/head.php' ?>
-    <link rel="stylesheet" href="assets/elements/form/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 
 <body>
